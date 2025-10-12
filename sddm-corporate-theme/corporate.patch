@@ -1,0 +1,271 @@
+Only in sddm-corporate-theme: Assets-corporate
+Only in sddm-corporate-theme: Assets-original
+Only in sddm-corporate-theme/Backgrounds: corporate.png
+diff -U0 -r -w sddm-astronaut-theme/Components/Clock.qml sddm-corporate-theme/Components/Clock.qml
+--- sddm-astronaut-theme/Components/Clock.qml	2025-09-06 21:13:19.186758368 -0500
++++ sddm-corporate-theme/Components/Clock.qml	2025-09-04 18:19:53.865017143 -0500
+@@ -37 +37 @@
+-            text = new Date().toLocaleTimeString(Qt.locale(config.Locale), config.HourFormat == "long" ? Locale.LongFormat : config.HourFormat !== "" ? config.HourFormat : Locale.ShortFormat)
++            text = new Date().toLocaleTimeString(Qt.locale(config.Locale), config.HourFormat == "long" ? Locale.LongFormat : config.HourFormat !== "" ? config.HourFormat : Locale.ShortFormat);
+@@ -52 +52,5 @@
+-            text = new Date().toLocaleDateString(Qt.locale(config.Locale), config.DateFormat == "short" ? Locale.ShortFormat : config.DateFormat !== "" ? config.DateFormat : Locale.LongFormat)
++            // text = new Date().toLocaleDateString(Qt.locale(config.Locale), config.DateFormat == "short" ? Locale.ShortFormat : config.DateFormat !== "" ? config.DateFormat : Locale.LongFormat);
++            let date = new Date();
++            let day = date.getDate();
++            let year = date.getFullYear();
++            text = date.toLocaleDateString(Qt.locale(config.Locale), config.DateFormat == "short" ? Locale.ShortFormat : config.DateFormat == "dddd MMMM d" ? config.DateFormat + getDaySuffix(day) + ", " + year : config.DateFormat !== "" ? config.DateFormat : Locale.LongFormat);
+@@ -61,2 +65,2 @@
+-            dateLabel.updateTime()
+-            timeLabel.updateTime()
++            dateLabel.updateTime();
++            timeLabel.updateTime();
+@@ -67,2 +71,14 @@
+-        dateLabel.updateTime()
+-        timeLabel.updateTime()
++        dateLabel.updateTime();
++        timeLabel.updateTime();
++    }
++
++    function getDaySuffix(day) {
++        if (day % 10 === 1 && day % 100 !== 11) {
++            return "st";
++        } else if (day % 10 === 2 && day % 100 !== 12) {
++            return "nd";
++        } else if (day % 10 === 3 && day % 100 !== 13) {
++            return "rd";
++        } else {
++            return "th";
++        }
+diff -U0 -r -w sddm-astronaut-theme/Components/Input.qml sddm-corporate-theme/Components/Input.qml
+--- sddm-astronaut-theme/Components/Input.qml	2025-09-06 21:13:19.187167560 -0500
++++ sddm-corporate-theme/Components/Input.qml	2025-09-04 17:23:29.158762761 -0500
+@@ -87 +87 @@
+-                username.text = currentText
++                username.text = currentText;
+@@ -130,2 +130,2 @@
+-                icon.height: parent.height * 0.25
+-                icon.width: parent.height * 0.25
++                icon.height: parent.height * 0.55
++                icon.width: parent.height * 0.55
+@@ -173 +173,5 @@
+-                    NumberAnimation { property: "opacity"; from: 0; to: 1 }
++                    NumberAnimation {
++                        property: "opacity"
++                        from: 0
++                        to: 1
++                    }
+@@ -211 +214,0 @@
+-
+@@ -234 +237 @@
+-                    selectAll()
++                    selectAll();
+@@ -282,2 +285,2 @@
+-            icon.height: parent.height * 0.25
+-            icon.width: parent.height * 0.25
++            icon.height: parent.height * 0.50
++            icon.width: parent.height * 0.50
+@@ -343 +345,0 @@
+-
+@@ -486,2 +488,2 @@
+-                        target: buttonBackground;
+-                        color: config.LoginButtonBackgroundColor;
++                        target: buttonBackground
++                        color: config.LoginButtonBackgroundColor
+@@ -491 +493 @@
+-                        target: loginButton.contentItem;
++                        target: loginButton.contentItem
+@@ -499 +501 @@
+-                        properties: "opacity, color";
++                        properties: "opacity, color"
+@@ -515 +517,2 @@
+-        function onLoginSucceeded() {}
++        function onLoginSucceeded() {
++        }
+@@ -517,2 +520,2 @@
+-            failed = true
+-            resetError.running ? resetError.stop() && resetError.start() : resetError.start()
++            failed = true;
++            resetError.running ? resetError.stop() && resetError.start() : resetError.start();
+diff -U0 -r -w sddm-astronaut-theme/Main.qml sddm-corporate-theme/Main.qml
+--- sddm-astronaut-theme/Main.qml	2025-09-06 21:13:19.209757223 -0500
++++ sddm-corporate-theme/Main.qml	2025-09-03 15:01:48.297147944 -0500
+@@ -34,19 +34,7 @@
+-    property bool leftleft: config.HaveFormBackground == "true" &&
+-                            config.PartialBlur == "false" &&
+-                            config.FormPosition == "left" &&
+-                            config.BackgroundHorizontalAlignment == "left"
+-
+-    property bool leftcenter: config.HaveFormBackground == "true" &&
+-                              config.PartialBlur == "false" &&
+-                              config.FormPosition == "left" &&
+-                              config.BackgroundHorizontalAlignment == "center"
+-
+-    property bool rightright: config.HaveFormBackground == "true" &&
+-                              config.PartialBlur == "false" &&
+-                              config.FormPosition == "right" &&
+-                              config.BackgroundHorizontalAlignment == "right"
+-
+-    property bool rightcenter: config.HaveFormBackground == "true" &&
+-                               config.PartialBlur == "false" &&
+-                               config.FormPosition == "right" &&
+-                               config.BackgroundHorizontalAlignment == "center"
++    property bool leftleft: config.HaveFormBackground == "true" && config.PartialBlur == "false" && config.FormPosition == "left" && config.BackgroundHorizontalAlignment == "left"
++
++    property bool leftcenter: config.HaveFormBackground == "true" && config.PartialBlur == "false" && config.FormPosition == "left" && config.BackgroundHorizontalAlignment == "center"
++
++    property bool rightright: config.HaveFormBackground == "true" && config.PartialBlur == "false" && config.FormPosition == "right" && config.BackgroundHorizontalAlignment == "right"
++
++    property bool rightcenter: config.HaveFormBackground == "true" && config.PartialBlur == "false" && config.FormPosition == "right" && config.BackgroundHorizontalAlignment == "center"
+@@ -102,3 +90,3 @@
+-            anchors.left: config.VirtualKeyboardPosition == "left" ? parent.left : undefined;
+-            anchors.horizontalCenter: config.VirtualKeyboardPosition == "center" ? parent.horizontalCenter : undefined;
+-            anchors.right: config.VirtualKeyboardPosition == "right" ? parent.right : undefined;
++            anchors.left: config.VirtualKeyboardPosition == "left" ? parent.left : undefined
++            anchors.horizontalCenter: config.VirtualKeyboardPosition == "center" ? parent.horizontalCenter : undefined
++            anchors.right: config.VirtualKeyboardPosition == "right" ? parent.right : undefined
+@@ -110 +98,3 @@
+-            function switchState() { state = state == "hidden" ? "visible" : "hidden"}
++            function switchState() {
++                state = state == "hidden" ? "visible" : "hidden";
++            }
+@@ -202 +192 @@
+-                    console.log("Video started.")
++                    console.log("Video started.");
+@@ -219,9 +209,3 @@
+-            horizontalAlignment: config.BackgroundHorizontalAlignment == "left" ?
+-                                 Image.AlignLeft :
+-                                 config.BackgroundHorizontalAlignment == "right" ?
+-                                 Image.AlignRight : Image.AlignHCenter
+-
+-            verticalAlignment: config.BackgroundVerticalAlignment == "top" ?
+-                               Image.AlignTop :
+-                               config.BackgroundVerticalAlignment == "bottom" ?
+-                               Image.AlignBottom : Image.AlignVCenter
++            horizontalAlignment: config.BackgroundHorizontalAlignment == "left" ? Image.AlignLeft : config.BackgroundHorizontalAlignment == "right" ? Image.AlignRight : Image.AlignHCenter
++
++            verticalAlignment: config.BackgroundVerticalAlignment == "top" ? Image.AlignTop : config.BackgroundVerticalAlignment == "bottom" ? Image.AlignBottom : Image.AlignVCenter
+@@ -238 +222 @@
+-                var fileType = config.Background.substring(config.Background.lastIndexOf(".") + 1)
++                var fileType = config.Background.substring(config.Background.lastIndexOf(".") + 1);
+@@ -242 +226 @@
+-                    player.source = Qt.resolvedUrl(config.Background)
++                    player.source = Qt.resolvedUrl(config.Background);
+@@ -244,3 +228,2 @@
+-                }
+-                else{
+-                    backgroundImage.source = config.background || config.Background
++                } else {
++                    backgroundImage.source = config.background || config.Background;
+diff -U0 -r -w sddm-astronaut-theme/metadata.desktop sddm-corporate-theme/metadata.desktop
+--- sddm-astronaut-theme/metadata.desktop	2025-09-06 21:13:19.215126669 -0500
++++ sddm-corporate-theme/metadata.desktop	2025-09-04 18:32:08.306308764 -0500
+@@ -9 +9 @@
+-ConfigFile=Themes/astronaut.conf
++ConfigFile=Themes/corporate.conf
+Only in sddm-corporate-theme/Previews: corporate.png
+Only in sddm-corporate-theme: .qtcreator
+diff -U0 -r -w sddm-astronaut-theme/setup.sh sddm-corporate-theme/setup.sh
+--- sddm-astronaut-theme/setup.sh	2025-09-06 21:13:19.215126669 -0500
++++ sddm-corporate-theme/setup.sh	2025-09-04 18:27:35.697440318 -0500
+@@ -19,2 +19 @@
+-    "astronaut" "black_hole" "cyberpunk" "hyprland_kath" "jake_the_dog"
+-    "japanese_aesthetic" "pixel_sakura" "pixel_sakura_static"
++    "astronaut" "black_hole" "corporate" "cyberpunk" "hyprland_kath" "jake_the_dog" "japanese_aesthetic" "pixel_sakura" "pixel_sakura_static"
+@@ -54 +53,3 @@
+-        echo -n "$1 (y/n): "; read -r r; [[ "$r" =~ ^[Yy]$ ]]
++        echo -n "$1 (y/n): "
++        read -r r
++        [[ "$r" =~ ^[Yy]$ ]]
+@@ -62 +63,4 @@
+-        select opt in "$@"; do [[ -n "$opt" ]] && { echo "$opt"; break; }; done
++        select opt in "$@"; do [[ -n "$opt" ]] && {
++            echo "$opt"
++            break
++        }; done
+@@ -67 +71,2 @@
+-    local title="$1"; shift
++    local title="$1"
++    shift
+@@ -71 +76,2 @@
+-        echo "$title"; "$@"
++        echo "$title"
++        "$@"
+@@ -77 +83,4 @@
+-    local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && { echo ${m%%-*}; break; }; done)
++    local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && {
++        echo ${m%%-*}
++        break
++    }; done)
+@@ -89,2 +98,6 @@
+-            sudo apt update && sudo apt install -y gum ;;
+-        *) error "Cannot install gum automatically"; return 1 ;;
++        sudo apt update && sudo apt install -y gum
++        ;;
++    *)
++        error "Cannot install gum automatically"
++        return 1
++        ;;
+@@ -99 +112,4 @@
+-            install_gum && { info "Restarting with gum..."; main; } || warn "Using fallback UI"
++            install_gum && {
++                info "Restarting with gum..."
++                main
++            } || warn "Using fallback UI"
+@@ -106 +122,4 @@
+-    local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && { echo ${m%%-*}; break; }; done)
++    local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && {
++        echo ${m%%-*}
++        break
++    }; done)
+@@ -115 +134,4 @@
+-        *) error "Unsupported package manager"; return 1 ;;
++    *)
++        error "Unsupported package manager"
++        return 1
++        ;;
+@@ -132 +154,4 @@
+-    [[ ! -d "$src" ]] && { error "Clone repository first"; return 1;}
++    [[ ! -d "$src" ]] && {
++        error "Clone repository first"
++        return 1
++    }
+@@ -155 +180,4 @@
+-    [[ ! -f "$METADATA" ]] && { error "Install theme first"; return 1; }
++    [[ ! -f "$METADATA" ]] && {
++        error "Install theme first"
++        return 1
++    }
+@@ -164 +192,4 @@
+-    command -v systemctl &>/dev/null || { error "systemctl not found"; return 1; }
++    command -v systemctl &>/dev/null || {
++        error "systemctl not found"
++        return 1
++    }
+@@ -190 +220,0 @@
+-
+@@ -198,2 +228,8 @@
+-    [[ $EUID -eq 0 ]] && { error "Don't run as root"; exit 1; }
+-    command -v git &>/dev/null || { error "git required"; exit 1; }
++    [[ $EUID -eq 0 ]] && {
++        error "Don't run as root"
++        exit 1
++    }
++    command -v git &>/dev/null || {
++        error "git required"
++        exit 1
++    }
+@@ -228 +264,4 @@
+-            "❌ Exit") info "Goodbye!"; exit 0 ;;
++        "❌ Exit")
++            info "Goodbye!"
++            exit 0
++            ;;
+@@ -231 +270,2 @@
+-        echo; if command -v gum &>/dev/null; then
++        echo
++        if command -v gum &>/dev/null; then
+@@ -234 +274,2 @@
+-            echo -n "Press Enter to continue..."; read -r
++            echo -n "Press Enter to continue..."
++            read -r
+Only in sddm-corporate-theme/Themes: corporate.conf
