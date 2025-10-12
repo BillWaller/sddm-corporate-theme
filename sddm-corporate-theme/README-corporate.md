@@ -36,11 +36,11 @@ Copyright (C) 2025-2025 BillWaller
 
 ## Example 1: IBM LOGO
 
-<img src="/home/bill/Document_root/corporate.png" style="width: 80%" />
+<img src="https://github.com/BillWaller/sddm-corporate-theme/blob/main/sddm-corporate-theme/Previews/corporate.png" style="width: 80%" />
 
 ## Example 2: SUSE Tumbleweed Logo
 
-<img src="/home/bill/Document_root/tumbleweed.png" style="width: 80%" />
+<img src="https://github.com/BillWaller/sddm-corporate-theme/blob/main/sddm-corporate-theme/Previews/tumbleweed.png" style="width: 80%" />
 
 ## Synopsis
 
