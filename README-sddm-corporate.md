@@ -1,10 +1,10 @@
-# Marian Arlt's SDDM-SUGAR-DARK-THEME
+## Marian Arlt's SDDM-SUGAR-DARK-THEME
 
 [by Marian Arlt at https://github.com/MarianArlt/sddm-sugar-dark](https://github.com/MarianArlt/sddm-sugar-dark)
 
 [Distributed under: GPLv3+ License https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
 
-## Essential Features Provided by SUGAR-DARK
+### Essential Features Provided by SUGAR-DARK
 
 - Space for a Corporate Logo
 
@@ -18,25 +18,29 @@
 
 - System Functions Including Restart and Shutdown
 
-# Keyitdev's SDDM-ASTRONAUT-THEME
+## Keyitdev's SDDM-ASTRONAUT-THEME
 
 [by Keyitdev at https://github.com/Keyitdev/sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)
 
-Copyright (C) 2022-2025 Keyitdev
-
-## Essential Features Provided by ASTRONAUT
+### Essential Features Provided by ASTRONAUT
 
 - Compatibility with QT6
 
 - User Friendly Setup
 
-# Bill Waller's SDDM-CORPORATE-THEME
+## Bill Waller's SDDM-CORPORATE-THEME
 
-[https://github.com/BillWaller/sddm-corporate-theme](https://github.com/BillWaller/sddm-corporate-theme)
+### With IBM Logo
+
+<img src="sddm-corporate-theme/Previews/corporate.png" title="SDDM Corporate Theme" style="width: 80%" />
 
 Copyright (C) 2025-2025 BillWaller
 
-![image](corporate.png)
+### With SuSE Tumbleweed Logo
+
+<img src="sddm-corporate-theme/Previews/tumbleweed.png" title="SDDM SuSE Tumbleweed Theme" style="width: 80%" />
+
+Copyright (C) 2025-2025 BillWaller
 
 ## Synopsis
 
