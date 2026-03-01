@@ -34,17 +34,13 @@ First, I must acknowledge the actual creators of this theme.
 
 ## Bill Waller's SDDM-CORPORATE-THEME
 
-### With IBM Logo
+![IBM](Previews/ibm.png)
 
-<img src="sddm-corporate-theme/Previews/corporate.png" title="SDDM Corporate Theme" style="width: 80%" />
+![Tumbleweed](Previews/tumbleweed.png)
 
-Copyright (C) 2025-2025 BillWaller
+![NORAD](Previews/norad.png)
 
-### With SuSE Tumbleweed Logo
-
-<img src="sddm-corporate-theme/Previews/tumbleweed.png" title="SDDM SuSE Tumbleweed Theme" style="width: 80%" />
-
-Copyright (C) 2025-2025 BillWaller
+![Linux](Previews/linux.png)
 
 ## Synopsis
 
@@ -77,4 +73,3 @@ The changes are cosmetic, and include:
 - Assets (Copy of New Icons)
 
 - sddm-corporate.patch
-
