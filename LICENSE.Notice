@@ -1,0 +1,55 @@
+# SDDM-CORPORATE-THEME
+
+This configuration was created by Bill Waller
+Repo: https://github.com/BillWaller/sddm-corporate-theme
+Copyright (C) 2025-2025 BillWaller.
+
+Distributed under the GPLv3+ License https://www.gnu.org/licenses/gpl-3.0.html
+
+## Origin
+
+This configuration is an adaptation of the SDDM-ASTRONAUT-THEME created by Keyitdev, https://github.com/Keyitdev/sddm-astronaut-theme
+
+# Copyright (C) 2022-2025 Keyitdev.
+
+## Themes/corporate.conf
+
+Includes most of the changes. In particular, the date format.
+
+# New DateFormat "dddd MMMM d" 
+
+This DateFormat will result in an "Americanized date format." For example:"
+
+# Friday September 5th 2025
+
+## Components/Input.qml
+
+The size of icons in the username and password fields were increased.
+
+## Components/Clock.qml
+
+This program has been modified to accept the DateFormat mentioned above.
+
+## Alternative Icons
+
+Alternative icons were placed in Assets-corporate, with the originals preserved in Assets-original.
+
+## sddm-corporate.patch
+
+Documents specific changes. Unfortunately, it is cluttered by extraneous 
+automatic editing by my qml formatter.
+
+
+# SDDM-ASTRONAUT-THEME
+
+## This Config was created by Keyitdev
+
+# https://github.com/Keyitdev/sddm-astronaut-theme
+
+# Copyright (C) 2022-2025 Keyitdev.
+
+# Based on https://github.com/MarianArlt/sddm-sugar-dark
+
+# Distributed under:
+
+# GPLv3+ License https://www.gnu.org/licenses/gpl-3.0.html
