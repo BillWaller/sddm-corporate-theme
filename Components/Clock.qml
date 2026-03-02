@@ -53,7 +53,7 @@ Column {
             let date = new Date();
             let day = date.getDate();
             let year = date.getFullYear();
-            text = date.toLocaleDateString(Qt.locale(config.Locale), config.DateFormat == "short" ? Locale.ShortFormat : config.DateFormat == "dddd MMMM d" ? config.DateFormat + getDaySuffix(day) + ", " + year : config.DateFormat !== "" ? config.DateFormat : Locale.LongFormat);
+            text = date.toLocaleDateString(Qt.locale(config.Locale), config.DateFormat == "short" ? Locale.ShortFormat : config.DateFormat == "dddd MMMM d" ? config.DateFormat : config.DateFormat !== "" ? config.DateFormat : Locale.LongFormat) + (config.DateFormat == "dddd MMMM d" ? getDaySuffix(day) + ", " + year : "");
         }
     }
 
@@ -73,11 +73,11 @@ Column {
     }
 
     function getDaySuffix(day) {
-        if (day % 10 === 1 && day % 100 !== 11) {
+        if (day === 1 || day === 21 || day === 31) {
             return "st";
-        } else if (day % 10 === 2 && day % 100 !== 12) {
+        } else if (day === 2 || day === 22) {
             return "nd";
-        } else if (day % 10 === 3 && day % 100 !== 13) {
+        } else if (day === 3 || day === 23) {
             return "rd";
         } else {
             return "th";
