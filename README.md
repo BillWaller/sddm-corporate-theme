@@ -149,7 +149,7 @@ Where your background is one of the png files in
 ls /usr/share/sddm/themes/sddm-corporate-theme/Backgrounds
 ```
 
-Currently, four backgrounds are included in the distribution. They are:
+Currently, five backgrounds are included in the distribution. They are:
 
 cia.png, ibm.png, linux.png, norad.png, and tumbleweed.png
 
