@@ -1,9 +1,529 @@
-Only in sddm-corporate-theme: Assets-corporate
-Only in sddm-corporate-theme: Assets-original
-Only in sddm-corporate-theme/Backgrounds: corporate.png
-diff -U0 -r -w sddm-astronaut-theme/Components/Clock.qml sddm-corporate-theme/Components/Clock.qml
---- sddm-astronaut-theme/Components/Clock.qml	2025-09-06 21:13:19.186758368 -0500
-+++ sddm-corporate-theme/Components/Clock.qml	2025-09-04 18:19:53.865017143 -0500
+# Patch created with the following command:
+diff -U0 -r -w -x .git sddm-astronaut-theme sddm-corporate-theme >corporate.patch
+
+diff -U0 -r -w -x .git sddm-astronaut-theme/Assets/Hibernate.svg 
+sddm-corporate-theme/Assets/Hibernate.svg
+--- sddm-astronaut-theme/Assets/Hibernate.svg	2025-09-03 12:57:00.278706978 -0500
++++ sddm-corporate-theme/Assets/Hibernate.svg	2026-03-04 12:57:38.071662388 -0600
+@@ -8 +8,4 @@
+-   id="svg8"
++   xmlns:xlink="http://www.w3.org/1999/xlink"
++   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
++   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
++   viewBox="0 0 48 48"
+@@ -10,5 +13,3 @@
+-   viewBox="0 0 34 34"
+-   height="34"
+-   width="34">
+-  <defs
+-     id="defs2" />
++   id="svg5"
++   sodipodi:docname="system-suspend-hibernate.svg"
++   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+@@ -16 +17 @@
+-     id="metadata5">
++     id="metadata9">
+@@ -23 +23,0 @@
+-        <dc:title></dc:title>
+@@ -26,0 +27,51 @@
++  <sodipodi:namedview
++     pagecolor="#ffffff"
++     bordercolor="#666666"
++     borderopacity="1"
++     objecttolerance="10"
++     gridtolerance="10"
++     guidetolerance="10"
++     inkscape:pageopacity="0"
++     inkscape:pageshadow="2"
++     inkscape:window-width="1920"
++     inkscape:window-height="1033"
++     id="namedview7"
++     showgrid="false"
++     inkscape:zoom="21.174316"
++     inkscape:cx="8.8709396"
++     inkscape:cy="16"
++     inkscape:window-x="0"
++     inkscape:window-y="0"
++     inkscape:window-maximized="1"
++     inkscape:current-layer="svg5" />
++  <defs
++     id="defs3051">
++    <linearGradient
++       inkscape:collect="always"
++       id="linearGradient820">
++      <stop
++         style="stop-color:#b192e1;stop-opacity:1"
++         offset="0"
++         id="stop816" />
++      <stop
++         style="stop-color:#3d1e6d;stop-opacity:1"
++         offset="1"
++         id="stop818" />
++    </linearGradient>
++    <style
++       type="text/css"
++       id="current-color-scheme">
++      .ColorScheme-Text {
++        color:#eff0f1;
++      }
++      </style>
++    <linearGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient820"
++       id="linearGradient822"
++       x1="3"
++       y1="15.88"
++       x2="29"
++       y2="15.88"
++       gradientUnits="userSpaceOnUse" />
++  </defs>
+@@ -28,7 +79,6 @@
+-     style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+-     d="M 17,1 C 8.163444,1 1,8.163444 1,17 1,25.836556 8.163444,33 17,33 25.836556,33 33,25.836556 33,17 33,8.163444 25.836556,1 17,1 Z m 0,1 C 25.284271,2 32,8.7157288 32,17 32,25.284271 25.284271,32 17,32 8.7157288,32 2,25.284271 2,17 2,8.7157288 8.7157288,2 17,2 Z"
+-     id="path831" />
+-  <path
+-     id="path816"
+-     d="M 17 11 C 13.686292 11 11 13.686292 11 17 C 11 20.313708 13.686292 23 17 23 C 20.313708 23 23 20.313708 23 17 C 23 13.686292 20.313708 11 17 11 z M 17 12 A 5 5 0 0 1 22 17 A 5 5 0 0 1 17 22 A 5 5 0 0 1 12 17 A 5 5 0 0 1 17 12 z "
+-     style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.71428573;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
++     style="color:#eff0f1;fill:url(#linearGradient822);fill-opacity:1;stroke:none"
++     id="path891-3"
++     d="m 9.789062,5.244375 -0.867187,0.5 L 11.068,9.461 7.453125,8.392 7.195,9.559 11.575,10.685781 14.644,15.802 H 8.707031 L 5.353516,12.648672 4.646484,13.355703 7.292969,16.002187 H 3 v 1 H 7.292969 L 4.646484,19.648672 5.353516,20.355703 8.707031,17.202 H 14.644 l -3.069,5.116593 -4.379688,1.226563 0.257813,0.966797 3.615234,-0.96875 -2.146484,3.716797 0.867187,0.5 2.146485,-3.716797 0.96875,3.615234 0.964844,-0.259765 L 12.843,22.818593 16,17.402 l 3.157,5.616203 -1.026141,4.380469 0.964844,0.259765 0.96875,-3.615234 2.146485,3.716797 0.867187,-0.5 -2.146484,-3.716797 3.615234,0.96875 0.257813,-0.966797 L 20.224609,22.119 17.356,17.202 h 5.936969 l 3.353515,3.153703 0.707032,-0.707031 -2.646485,-2.646485 H 29 v -1 h -4.292969 l 2.007813,-2.001953 H 25.287109 L 23.292969,15.802 H 17.056 L 18.21,14 16.85,14.000234 15.9,15.5 12.843,10.186 13.969,5.605703 12.904297,5.345937 11.935547,8.961172 Z m 15.544275,1.286941 h 1.666666 V 7.375088 H 23.66667 L 25.333337,4.843772 H 23.666673 V 4 H 27 Z m -1.989669,5.624912 h 1.666665 V 13 H 21.677 l 1.666668,-2.531315 H 21.677003 V 9.624913 h 3.333326 z m -4.677,-3.374854 h 1.666665 V 9.625146 H 17 L 18.666668,7.09383 H 17.000003 V 6.250058 h 3.333327 z"
++     class="ColorScheme-Text"
++     inkscape:connector-curvature="0"
++     sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+Only in sddm-corporate-theme/Assets: Logut.svg
+diff -U0 -r -w -x .git sddm-astronaut-theme/Assets/Password2.svg sddm-corporate-theme/Assets/Password2.svg
+--- sddm-astronaut-theme/Assets/Password2.svg	2025-09-03 12:57:00.279624560 -0500
++++ sddm-corporate-theme/Assets/Password2.svg	2026-03-04 12:58:00.835243056 -0600
+@@ -2,20 +2,5 @@
+-<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.19 512.19" style="enable-background:new 0 0 512.19 512.19;" xml:space="preserve" width="512" height="512">
+-<g>
+-	<path d="M496.543,200.771c-19.259-31.537-43.552-59.707-71.915-83.392l59.733-59.733c8.185-8.475,7.95-21.98-0.525-30.165   c-8.267-7.985-21.374-7.985-29.641,0l-64.96,65.045c-40.269-23.918-86.306-36.385-133.141-36.053   c-132.075,0-207.339,90.411-240.448,144.299c-20.862,33.743-20.862,76.379,0,110.123c19.259,31.537,43.552,59.707,71.915,83.392   l-59.733,59.733c-8.475,8.185-8.71,21.691-0.525,30.165c8.185,8.475,21.691,8.71,30.165,0.525c0.178-0.172,0.353-0.347,0.525-0.525   l65.109-65.109c40.219,23.915,86.201,36.402,132.992,36.117c132.075,0,207.339-90.411,240.448-144.299   C517.405,277.151,517.405,234.515,496.543,200.771z M128.095,255.833c-0.121-70.575,56.992-127.885,127.567-128.006   c26.703-0.046,52.75,8.275,74.481,23.793l-30.976,30.976c-13.004-7.842-27.887-12.022-43.072-12.096   c-47.128,0-85.333,38.205-85.333,85.333c0.074,15.185,4.254,30.068,12.096,43.072l-30.976,30.976   C136.414,308.288,128.096,282.394,128.095,255.833z M256.095,383.833c-26.561-0.001-52.455-8.319-74.048-23.787l30.976-30.976   c13.004,7.842,27.887,12.022,43.072,12.096c47.128,0,85.333-38.205,85.333-85.333c-0.074-15.185-4.254-30.068-12.096-43.072   l30.976-30.976c41.013,57.434,27.702,137.242-29.732,178.255C308.845,375.558,282.798,383.879,256.095,383.833z"/>
+-</g>
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
++<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
++  <defs id="defs3051">
++    <style type="text/css" id="current-color-scheme">.ColorScheme-Text { color: #008fff; } </style>
++  </defs>
++ <path style="fill:currentColor;fill-opacity:1;stroke:none" d="M 18.292969 3 L 3 18.292969 L 3.7070312 19 L 19 3.7070312 L 18.292969 3 z M 11 6 A 10 9.9999781 0 0 0 2.2871094 11.119141 C 2.4663699 11.420241 2.7209984 11.668644 3.0273438 11.839844 A 9 8.99998 0 0 1 11 7 A 4 4 0 0 0 7 11 A 4 4 0 0 0 7.3574219 12.642578 L 8.1308594 11.869141 A 3 3 0 0 1 8 11 A 3 3 0 0 1 11 8 A 3 3 0 0 1 11.869141 8.1308594 L 12.640625 7.359375 A 4 4 0 0 0 11.34375 7.0175781 A 9 8.99998 0 0 1 12.796875 7.203125 L 13.640625 6.359375 A 10 9.9999781 0 0 0 11 6 z M 16.404297 7.5957031 L 15.675781 8.3242188 A 9 8.99998 0 0 1 18.974609 11.837891 C 19.282742 11.665091 19.539718 11.415428 19.71875 11.111328 A 10 9.9999781 0 0 0 16.404297 7.5957031 z M 11 9 A 2 2 0 0 0 9 11 L 11 9 z M 14.642578 9.3574219 L 13.869141 10.130859 A 3 3 0 0 1 14 11 A 3 3 0 0 1 11 14 A 3 3 0 0 1 10.130859 13.869141 L 9.3574219 14.642578 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 11 A 4 4 0 0 0 14.642578 9.3574219 z M 13 11 L 11 13 A 2 2 0 0 0 13 11 z M 1 13 C 0.33333333 19 0.66666667 16 1 13 z " class="ColorScheme-Text"/>
+diff -U0 -r -w -x .git sddm-astronaut-theme/Assets/Password.svg sddm-corporate-theme/Assets/Password.svg
+--- sddm-astronaut-theme/Assets/Password.svg	2025-09-03 12:57:00.279624560 -0500
++++ sddm-corporate-theme/Assets/Password.svg	2026-03-04 12:58:10.715067310 -0600
+@@ -2 +2,6 @@
+-<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M23.821,11.181v0C22.943,9.261,19.5,3,12,3S1.057,9.261.179,11.181a1.969,1.969,0,0,0,0,1.64C1.057,14.739,4.5,21,12,21s10.943-6.261,11.821-8.181A1.968,1.968,0,0,0,23.821,11.181ZM12,18a6,6,0,1,1,6-6A6.006,6.006,0,0,1,12,18Z"/><circle cx="12" cy="12" r="4"/></svg>
++<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
++  <defs id="defs3051">
++    <style type="text/css" id="current-color-scheme">.ColorScheme-Text { color: #ff7f00; } </style>
++  </defs>
++ <path style="fill:currentColor;fill-opacity:1;stroke:none" d="M 11 6 A 10 9.999975 0 0 0 2.3144531 11.070312 C 2.4995621 11.361743 2.7600802 11.597238 3.0664062 11.759766 A 9 8.999978 0 0 1 11 7 A 4 4 0 0 0 7 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 11 A 4 4 0 0 0 11.34375 7.0175781 A 9 8.999978 0 0 1 18.931641 11.761719 C 19.241063 11.598077 19.503624 11.359298 19.689453 11.064453 A 10 9.999975 0 0 0 11 6 z M 11 8 A 3 3 0 0 1 14 11 A 3 3 0 0 1 11 14 A 3 3 0 0 1 8 11 A 3 3 0 0 1 11 8 z M 11 9 C 9.892 9 9 9.892 9 11 C 9 12.108 9.892 13 11 13 C 12.108 13 13 12.108 13 11 C 13 10.79519 12.960983 10.601795 12.904297 10.416016 C 12.746415 10.759733 12.404317 11 12 11 C 11.446 11 11 10.554 11 10 C 11 9.595683 11.240267 9.2535881 11.583984 9.0957031 C 11.398205 9.0390231 11.20481 9 11 9 z " class="ColorScheme-Text"/>  
++</svg>
+diff -U0 -r -w -x .git sddm-astronaut-theme/Assets/Reboot.svg sddm-corporate-theme/Assets/Reboot.svg
+--- sddm-astronaut-theme/Assets/Reboot.svg	2025-09-03 12:57:00.279624560 -0500
++++ sddm-corporate-theme/Assets/Reboot.svg	2026-03-04 12:58:24.673928023 -0600
+@@ -8,3 +8,4 @@
+-   width="34"
+-   height="34"
+-   viewBox="0 0 34 34"
++   xmlns:xlink="http://www.w3.org/1999/xlink"
++   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
++   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
++   viewBox="0 0 48 48"
+@@ -12,3 +13,3 @@
+-   id="svg8">
+-  <defs
+-     id="defs2" />
++   id="svg6"
++   sodipodi:docname="system-reboot.svg"
++   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+@@ -16 +17 @@
+-     id="metadata5">
++     id="metadata10">
+@@ -23 +23,0 @@
+-        <dc:title></dc:title>
+@@ -27,3 +27,51 @@
+-  <g
+-     id="layer1"
+-     transform="matrix(1.000593,0,0,1.0006688,0.99050505,-287.73702)">
++  <sodipodi:namedview
++     pagecolor="#ffffff"
++     bordercolor="#666666"
++     borderopacity="1"
++     objecttolerance="10"
++     gridtolerance="10"
++     guidetolerance="10"
++     inkscape:pageopacity="0"
++     inkscape:pageshadow="2"
++     inkscape:window-width="1920"
++     inkscape:window-height="1033"
++     id="namedview8"
++     showgrid="false"
++     inkscape:zoom="21.493729"
++     inkscape:cx="6.7894729"
++     inkscape:cy="13.369721"
++     inkscape:window-x="0"
++     inkscape:window-y="0"
++     inkscape:window-maximized="1"
++     inkscape:current-layer="svg6" />
++  <defs
++     id="defs3051">
++    <linearGradient
++       inkscape:collect="always"
++       id="linearGradient820">
++      <stop
++         style="stop-color:#05d4ff;stop-opacity:1"
++         offset="0"
++         id="stop816" />
++      <stop
++         style="stop-color:#004b5a;stop-opacity:1"
++         offset="1"
++         id="stop818" />
++    </linearGradient>
++    <style
++       type="text/css"
++       id="current-color-scheme">
++      .ColorScheme-Text {
++        color:#eff0f1;
++      }
++      </style>
++    <linearGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient820"
++       id="linearGradient822"
++       x1="4"
++       y1="16"
++       x2="28"
++       y2="16"
++       gradientUnits="userSpaceOnUse" />
++  </defs>
+@@ -31,5 +79,6 @@
+-       style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.00189281;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+-       d="M 19.001953,1.1308594 V 2 H 19 v 11 h 1 V 2.3359375 A 15,15 45 0 1 32,17 15,15 45 0 1 21.001953,31.455078 v 1.033203 A 16.009488,16.010701 45 0 0 33.009766,17 16.009488,16.010701 45 0 0 19.001953,1.1308594 Z M 12.998047,1.5117188 A 16.009488,16.010701 45 0 0 0.99023438,17 16.009488,16.010701 45 0 0 14.998047,32.869141 V 32 H 15 V 21 H 14 V 31.664062 A 15,15 45 0 1 2,17 15,15 45 0 1 12.998047,2.5449219 Z"
+-       transform="matrix(0.70668771,-0.70663419,0.70668771,0.70663419,-8.0273788,304.53335)"
+-       id="path817" />
+-  </g>
++     style="color:#eff0f1;fill:url(#linearGradient822);fill-opacity:1;stroke:none"
++     d="M 16,4 C 13.859179,4.00462 11.57247,4.7214382 9.7299152,5.8114506 L 15.292969,11.050781 16.418727,9.9211172 12.228626,6.0755756 C 13.616515,5.4633843 14.715725,5.3117847 16.09305,5.3534748 22.400808,5.5395756 26.6,9.9248678 26.6,16 c -0.0045,1.874364 -0.441076,3.390811 -1.357475,5.025886 l 1.0856,1.054192 C 27.417466,20.238665 27.994687,18.139495 28,16 28,9.372583 22.627417,4 16,4 Z M 5.5788246,10.381268 C 4.4888122,12.223823 4.0046166,13.859179 4,16 c 0,6.627417 5.372583,12 12,12 2.140821,-0.0046 4.241429,-0.581863 6.083984,-1.671875 l -5.376953,-5.378906 -1.079233,1.160256 3.952525,3.904547 C 18.192119,26.62782 17.517835,26.694203 16,26.7 9.9248678,26.7 5.5,22.075132 5.5,16 5.50451,14.125636 5.748025,13.167492 6.6644244,11.532417 Z"
++     class="ColorScheme-Text"
++     id="path4"
++     inkscape:connector-curvature="0"
++     sodipodi:nodetypes="cccccccccccccccccccccc" />
+diff -U0 -r -w -x .git sddm-astronaut-theme/Assets/Shutdown.svg sddm-corporate-theme/Assets/Shutdown.svg
+--- sddm-astronaut-theme/Assets/Shutdown.svg	2025-09-03 12:57:00.279624560 -0500
++++ sddm-corporate-theme/Assets/Shutdown.svg	2026-03-04 12:58:32.593353320 -0600
+@@ -8 +8,4 @@
+-   id="svg8"
++   xmlns:xlink="http://www.w3.org/1999/xlink"
++   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
++   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
++   viewBox="0 0 48 48"
+@@ -10,5 +13,3 @@
+-   viewBox="0 0 34 34"
+-   height="34"
+-   width="34">
+-  <defs
+-     id="defs2" />
++   id="svg6"
++   sodipodi:docname="system-shutdown.svg"
++   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+@@ -16 +17 @@
+-     id="metadata5">
++     id="metadata10">
+@@ -23 +23,0 @@
+-        <dc:title></dc:title>
+@@ -26,0 +27,51 @@
++  <sodipodi:namedview
++     pagecolor="#ffffff"
++     bordercolor="#666666"
++     borderopacity="1"
++     objecttolerance="10"
++     gridtolerance="10"
++     guidetolerance="10"
++     inkscape:pageopacity="0"
++     inkscape:pageshadow="2"
++     inkscape:window-width="1920"
++     inkscape:window-height="1033"
++     id="namedview8"
++     showgrid="false"
++     inkscape:zoom="21.493729"
++     inkscape:cx="2.4903289"
++     inkscape:cy="15.01671"
++     inkscape:window-x="0"
++     inkscape:window-y="0"
++     inkscape:window-maximized="1"
++     inkscape:current-layer="svg6" />
++  <defs
++     id="defs3051">
++    <linearGradient
++       inkscape:collect="always"
++       id="linearGradient820">
++      <stop
++         style="stop-color:#ff7272;stop-opacity:1"
++         offset="0"
++         id="stop816" />
++      <stop
++         style="stop-color:#640000;stop-opacity:1"
++         offset="1"
++         id="stop818" />
++    </linearGradient>
++    <style
++       type="text/css"
++       id="current-color-scheme">
++      .ColorScheme-Text {
++        color:#eff0f1;
++      }
++      </style>
++    <linearGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient820"
++       id="linearGradient822"
++       x1="4"
++       y1="16"
++       x2="28"
++       y2="16"
++       gradientUnits="userSpaceOnUse" />
++  </defs>
+@@ -28,3 +79,6 @@
+-     id="path822"
+-     d="M 14 1 L 14 13 L 15 13 L 15 1 L 14 1 z M 19 1 L 19 13 L 20 13 L 20 1 L 19 1 z M 9 3.1855469 C 4.1702837 5.9748853 1.0026451 11.162345 1 17 C 1 25.836556 8.163444 33 17 33 C 25.836556 33 33 25.836556 33 17 C 32.99593 11.163669 29.828666 5.9780498 25 3.1894531 L 25 4.3496094 C 29.280842 7.0494632 31.988612 11.788234 32 17 C 32 25.284271 25.284271 32 17 32 C 8.7157288 32 2 25.284271 2 17 C 2.0120649 11.788824 4.7195457 7.0510246 9 4.3515625 L 9 3.1855469 z "
+-     style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
++     style="color:#eff0f1;fill:url(#linearGradient822);fill-opacity:1;stroke:none"
++     d="M 15,4 V 4.05078 5.054686 13 h 2 V 5.050781 4.046875 4 h -1 z m 3,0.169922 V 5.591 C 22.963705,6.7205624 26.484078,10.773948 26.6,16 26.19486,22.190886 21.612593,26.732154 16,26.6 10.240993,26.464399 5.7057812,22.075132 5.4,16 5.6847547,10.69852 9.124358,6.5529048 14,5.589 V 4.181641 C 8.2314026,5.1567079 4.0067289,10.149579 4,16 4,22.627417 9.372583,28 16,28 22.627417,28 28,22.627417 28,16 27.998984,10.145149 23.772961,5.1457305 18,4.169922 Z"
++     class="ColorScheme-Text"
++     id="path4"
++     inkscape:connector-curvature="0"
++     sodipodi:nodetypes="cccccccccccccsccccscc" />
+diff -U0 -r -w -x .git sddm-astronaut-theme/Assets/Suspend.svg sddm-corporate-theme/Assets/Suspend.svg
+--- sddm-astronaut-theme/Assets/Suspend.svg	2025-09-03 12:57:00.279624560 -0500
++++ sddm-corporate-theme/Assets/Suspend.svg	2026-03-04 12:58:42.593882873 -0600
+@@ -8 +8,4 @@
+-   id="svg8"
++   xmlns:xlink="http://www.w3.org/1999/xlink"
++   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
++   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
++   viewBox="0 0 48 48"
+@@ -10,5 +13,3 @@
+-   viewBox="0 0 34 34"
+-   height="34"
+-   width="34">
+-  <defs
+-     id="defs2" />
++   id="svg5"
++   sodipodi:docname="system-suspend.svg"
++   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+@@ -16 +17 @@
+-     id="metadata5">
++     id="metadata9">
+@@ -23 +23,0 @@
+-        <dc:title></dc:title>
+@@ -26,0 +27,51 @@
++  <sodipodi:namedview
++     pagecolor="#ffffff"
++     bordercolor="#666666"
++     borderopacity="1"
++     objecttolerance="10"
++     gridtolerance="10"
++     guidetolerance="10"
++     inkscape:pageopacity="0"
++     inkscape:pageshadow="2"
++     inkscape:window-width="1920"
++     inkscape:window-height="1033"
++     id="namedview7"
++     showgrid="false"
++     inkscape:zoom="15.198362"
++     inkscape:cx="7.3954017"
++     inkscape:cy="11.369894"
++     inkscape:window-x="0"
++     inkscape:window-y="0"
++     inkscape:window-maximized="1"
++     inkscape:current-layer="svg5" />
++  <defs
++     id="defs3051">
++    <linearGradient
++       inkscape:collect="always"
++       id="linearGradient820">
++      <stop
++         style="stop-color:#3daee9;stop-opacity:1;"
++         offset="0"
++         id="stop816" />
++      <stop
++         style="stop-color:#0c4a6a;stop-opacity:1"
++         offset="1"
++         id="stop818" />
++    </linearGradient>
++    <style
++       type="text/css"
++       id="current-color-scheme">
++      .ColorScheme-Text {
++        color:#eff0f1;
++      }
++      </style>
++    <linearGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient820"
++       id="linearGradient822"
++       x1="4"
++       y1="15.999998"
++       x2="27.999999"
++       y2="15.999998"
++       gradientUnits="userSpaceOnUse" />
++  </defs>
+@@ -28,3 +79,6 @@
+-     style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+-     d="M 17,1 C 8.163444,1 1,8.163444 1,17 1,25.836556 8.163444,33 17,33 25.836556,33 33,25.836556 33,17 33,8.163444 25.836556,1 17,1 Z m 0,1 C 25.284271,2 32,8.7157288 32,17 32,25.284271 25.284271,32 17,32 8.7157288,32 2,25.284271 2,17 2,8.7157288 8.7157288,2 17,2 Z m -4,9 v 12 h 1 V 11 Z m 7,0 v 12 h 1 V 11 Z"
+-     id="path831" />
++     style="color:#eff0f1;fill:url(#linearGradient822);fill-opacity:1;stroke:none"
++     id="path902-3"
++     d="M 10.216059,3.999996 C 6.36165,6.3471 4.006562,10.53215 4,15.04594 4,22.20027 9.798203,28 16.95064,28 21.46591,27.996 25.652707,25.6384 27.999999,21.78019 L 27.209551,20.98954 C 25.405202,22.04058 23.356021,22.39641 21.268,22.402 14.890411,22.580816 10.086781,17.776831 9.596,10.72792 9.5993,8.6383 10.154052,6.58663 11.204,4.7801 Z M 9.309675,5.81744 C 8.662452,7.37405 8.125327,9.04207 8.117,10.72792 c 0,7.305313 5.998081,13.352636 13.150521,13.15408 1.70769,-0.004 3.397587,-0.54726 4.972421,-1.20784 L 25.622,22.81331 C 23.368941,25.41932 20.395053,26.61755 16.95064,26.62 10.877206,26.426811 5.8713374,21.447195 5.479,15.046 5.4837,11.59899 6.986748,8.32425 9.596,6.07256 Z m 14.857,1.99512 h 1.833332 V 8.75008 H 22.333341 L 24.166675,5.93752 H 22.333344 V 5 h 3.66666 z m -2.188636,6.24992 H 23.81137 V 15 h -3.666666 l 1.833335,-2.81258 h -1.833332 v -0.93753 h 3.666659 z m -5.1447,-4.00001 H 18.66667 V 11 H 15.000004 L 16.833339,8.18743 H 15.000007 V 7.2499 h 3.66666 z"
++     class="ColorScheme-Text"
++     inkscape:connector-curvature="0"
++     sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccc" />
+Only in sddm-corporate-theme/Assets: Users.svg
+diff -U0 -r -w -x .git sddm-astronaut-theme/Assets/User.svg sddm-corporate-theme/Assets/User.svg
+--- sddm-astronaut-theme/Assets/User.svg	2025-09-03 12:57:00.279624560 -0500
++++ sddm-corporate-theme/Assets/User.svg	2026-03-04 12:59:31.766715252 -0600
+@@ -7,0 +8 @@
++   xmlns:xlink="http://www.w3.org/1999/xlink"
+@@ -10,7 +11 @@
+-   height="28"
+-   width="28"
+-   id="svg12"
+-   xml:space="preserve"
+-   viewBox="0 0 28 28"
+-   y="0px"
+-   x="0px"
++   viewBox="0 0 48 48"
+@@ -18,2 +13,15 @@
+-   sodipodi:docname="user.svgz"
+-   inkscape:version="0.92.2 2405546, 2018-03-11"><sodipodi:namedview
++   id="svg5"
++   sodipodi:docname="system-switch-user.svg"
++   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
++  <metadata
++     id="metadata9">
++    <rdf:RDF>
++      <cc:Work
++         rdf:about="">
++        <dc:format>image/svg+xml</dc:format>
++        <dc:type
++           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
++      </cc:Work>
++    </rdf:RDF>
++  </metadata>
++  <sodipodi:namedview
+@@ -21 +29 @@
+-     bordercolor="#666666"
++     bordercolor="#00cff0"
+@@ -28,3 +36,3 @@
+-     inkscape:window-width="1440"
+-     inkscape:window-height="843"
+-     id="namedview8"
++     inkscape:window-width="1920"
++     inkscape:window-height="1033"
++     id="namedview7"
+@@ -32,7 +40,3 @@
+-     fit-margin-top="0"
+-     fit-margin-left="0"
+-     fit-margin-right="0"
+-     fit-margin-bottom="0"
+-     inkscape:zoom="3.2721019"
+-     inkscape:cx="11.317087"
+-     inkscape:cy="22.626613"
++     inkscape:zoom="15.198362"
++     inkscape:cx="5.0250237"
++     inkscape:cy="12.539775"
+@@ -40 +44 @@
+-     inkscape:window-y="22"
++     inkscape:window-y="0"
+@@ -42,11 +46,40 @@
+-     inkscape:current-layer="svg12" /><metadata
+-     id="metadata18"><rdf:RDF><cc:Work
+-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+-     id="defs16" /><g
+-     id="g6"
+-     transform="scale(0.06862745)"><g
+-       id="g4"><path
+-         id="path2"
+-         d="M 204,204 C 260.1,204 306,158.1 306,102 306,45.9 260.1,0 204,0 147.9,0 102,45.9 102,102 c 0,56.1 45.9,102 102,102 z m 0,51 C 135.15,255 0,288.15 0,357 v 51 H 408 V 357 C 408,288.15 272.85,255 204,255 Z"
+-         inkscape:connector-curvature="0" /></g></g></svg>
+\ No newline at end of file
++     inkscape:current-layer="svg5" />
++  <defs
++     id="defs3051">
++    <linearGradient
++       inkscape:collect="always"
++       id="linearGradient820">
++      <stop
++         style="stop-color:#00cff0;stop-opacity:1"
++         offset="0"
++         id="stop816" />
++      <stop
++         style="stop-color:#007fc0;stop-opacity:1"
++         offset="1"
++         id="stop818" />
++    </linearGradient>
++    <style
++       type="text/css"
++       id="current-color-scheme">
++      .ColorScheme-Text {
++        color:#eff0f1;
++      }
++      </style>
++    <linearGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient820"
++       id="linearGradient822"
++       x1="6"
++       y1="15.999999"
++       x2="26"
++       y2="15.999999"
++       gradientUnits="userSpaceOnUse" />
++  </defs>
++  <path
++     style="color:#eff0f1;fill:url(#linearGradient822);fill-opacity:1;stroke:none"
++     id="path1011"
++     d="M 18,8 C 16.714153,8 15.583323,8.617761 14.851562,9.560547 15.180837,9.672691 15.497516,9.911842 15.796875,10.079 16.345252,9.481598 17.12515,9.1 18,9.1 c 1.656852,0 2.9,1.243147 2.9,2.9 0,1.398728 -0.860744,2.564273 -2.155859,2.896484 6.21e-4,0.03481 0.0059,-0.13144 0.0059,-0.09648 0,0.318095 -0.03235,0.827594 -0.08203,1.131641 C 20.557605,15.612437 22,13.980455 22,12 22,9.790862 20.209142,8 18,8 Z M 13,19.8 C 9.1189423,19.8 6,22.689616 6,26.435547 6.0033,26.962961 6.06906,27.687484 6.198034,28.2 H 7.3097713 18.972229 19.857 C 19.985998,27.687484 19.997113,26.963414 20,26.436 20,22.690069 16.881058,19.8 13,19.8 Z m 0.027,1.192 c 3.813868,0 5.773,2.274365 5.773,5.444 -0.0011,0.174256 -0.01135,0.347611 -0.029,0.521 H 7.229 C 7.21135,26.783611 7.20159,26.609803 7.2,26.435547 7.2,23.265912 9.1799713,20.992 12.973,20.992 Z m 6.224205,-3.992043 c -0.25686,0 -0.509035,0.01606 -0.758429,0.04297 -0.12585,0.383697 -0.291433,0.751062 -0.492776,1.097662 0.410411,-0.09117 0.830028,0.0617 1.251205,0.05941 3.153826,1e-6 5.610795,2.262412 5.610795,5.299995 -9e-4,0.166968 -0.0096,0.13381 -0.027,0.300006 h -4.42997 c 0.108739,0.321192 0.202605,0.848798 0.269709,1.186331 l 5.134641,0.01367 C 25.93326,24.508838 25.99723,24.005434 26,23.499992 26,19.910121 22.97845,16.999953 19.251205,16.999954 Z M 13,11 c -2.209143,0 -3.9999997,1.790862 -3.9999997,4 0,2.20914 1.7908567,4.000001 3.9999997,4 2.209142,1e-6 4,-1.79086 4,-4 0,-2.209138 -1.790858,-4 -4,-4 z m 0,1.2 c 1.656852,0 2.8,1.143147 2.8,2.8 0,1.656854 -1.143148,2.800001 -2.8,2.8 -1.656852,1e-6 -2.8,-1.143146 -2.8,-2.8 0,-1.656853 1.143148,-2.8 2.8,-2.8 z m 3.027,-8.400001 c -2.034737,0 -3.684211,1.645485 -3.684211,3.675293 V 8.090575 L 10.736,6.388 10.123,7.130953 12.356,9.358 13,10 13.582,9.257328 15.646,7.03 15.002,6.388291 13.295,8.091 V 7.475 c 0,-1.449863 1.278621,-2.624917 2.732,-2.624917 1.453379,0 1.973,0.519045 1.973,1.968908 h 1 C 19,4.718823 17.883088,3.839078 16.027,3.799999 Z"
++     class="ColorScheme-Text"
++     inkscape:connector-curvature="0"
++     sodipodi:nodetypes="sccsscscsssccccccssccccssccccccccccccssssssscsscscccccccccssccc" />
++</svg>
+Only in sddm-astronaut-theme/Backgrounds: astronaut.png
+Only in sddm-astronaut-theme/Backgrounds: black_hole.png
+Only in sddm-corporate-theme/Backgrounds: cia.png
+Only in sddm-astronaut-theme/Backgrounds: cyberpunk.png
+Only in sddm-corporate-theme/Backgrounds: default.png
+Only in sddm-astronaut-theme/Backgrounds: hyprland_kath.mp4
+Only in sddm-astronaut-theme/Backgrounds: hyprland_kath.png
+Only in sddm-corporate-theme/Backgrounds: ibm.png
+Only in sddm-astronaut-theme/Backgrounds: jake_the_dog.mp4
+Only in sddm-astronaut-theme/Backgrounds: jake_the_dog.png
+Only in sddm-astronaut-theme/Backgrounds: japanese_aesthetic.png
+Only in sddm-corporate-theme/Backgrounds: linux.png
+Only in sddm-corporate-theme/Backgrounds: norad.png
+Only in sddm-astronaut-theme/Backgrounds: pixel_sakura.gif
+Only in sddm-astronaut-theme/Backgrounds: pixel_sakura_static.png
+Only in sddm-astronaut-theme/Backgrounds: post-apocalyptic_hacker.png
+Only in sddm-astronaut-theme/Backgrounds: purple_leaves.png
+Only in sddm-corporate-theme/Backgrounds: space_force.png
+Only in sddm-corporate-theme/Backgrounds: tumbleweed.png
+diff -U0 -r -w -x .git sddm-astronaut-theme/Components/Clock.qml sddm-corporate-theme/Components/Clock.qml
+--- sddm-astronaut-theme/Components/Clock.qml	2025-09-03 12:57:00.342263107 -0500
++++ sddm-corporate-theme/Components/Clock.qml	2026-03-02 16:14:45.999555451 -0600
 @@ -37 +37 @@
 -            text = new Date().toLocaleTimeString(Qt.locale(config.Locale), config.HourFormat == "long" ? Locale.LongFormat : config.HourFormat !== "" ? config.HourFormat : Locale.ShortFormat)
 +            text = new Date().toLocaleTimeString(Qt.locale(config.Locale), config.HourFormat == "long" ? Locale.LongFormat : config.HourFormat !== "" ? config.HourFormat : Locale.ShortFormat);
@@ -14,6 +534,9 @@ diff -U0 -r -w sddm-astronaut-theme/Components/Clock.qml sddm-corporate-theme/Co
 +            let day = date.getDate();
 +            let year = date.getFullYear();
 +            text = date.toLocaleDateString(Qt.locale(config.Locale), config.DateFormat == "short" ? Locale.ShortFormat : config.DateFormat == "dddd MMMM d" ? config.DateFormat : config.DateFormat !== "" ? config.DateFormat : Locale.LongFormat) + (config.DateFormat == "dddd MMMM d" ? getDaySuffix(day) + ", " + year : "");
+@@ -61,2 +65,2 @@
+-            dateLabel.updateTime()
+-            timeLabel.updateTime()
 +            dateLabel.updateTime();
 +            timeLabel.updateTime();
 @@ -67,2 +71,14 @@
@@ -24,18 +547,18 @@ diff -U0 -r -w sddm-astronaut-theme/Components/Clock.qml sddm-corporate-theme/Co
 +    }
 +
 +    function getDaySuffix(day) {
-+        if (day % 10 === 1 && day % 100 !== 11) {
++        if (day === 1 || day === 21 || day === 31) {
 +            return "st";
-+        } else if (day % 10 === 2 && day % 100 !== 12) {
++        } else if (day === 2 || day === 22) {
 +            return "nd";
-+        } else if (day % 10 === 3 && day % 100 !== 13) {
++        } else if (day === 3 || day === 23) {
 +            return "rd";
 +        } else {
 +            return "th";
 +        }
-diff -U0 -r -w sddm-astronaut-theme/Components/Input.qml sddm-corporate-theme/Components/Input.qml
---- sddm-astronaut-theme/Components/Input.qml	2025-09-06 21:13:19.187167560 -0500
-+++ sddm-corporate-theme/Components/Input.qml	2025-09-04 17:23:29.158762761 -0500
+diff -U0 -r -w -x .git sddm-astronaut-theme/Components/Input.qml sddm-corporate-theme/Components/Input.qml
+--- sddm-astronaut-theme/Components/Input.qml	2025-09-03 12:57:00.343813237 -0500
++++ sddm-corporate-theme/Components/Input.qml	2026-03-01 12:35:55.830200899 -0600
 @@ -87 +87 @@
 -                username.text = currentText
 +                username.text = currentText;
@@ -83,9 +606,12 @@ diff -U0 -r -w sddm-astronaut-theme/Components/Input.qml sddm-corporate-theme/Co
 -            resetError.running ? resetError.stop() && resetError.start() : resetError.start()
 +            failed = true;
 +            resetError.running ? resetError.stop() && resetError.start() : resetError.start();
-diff -U0 -r -w sddm-astronaut-theme/Main.qml sddm-corporate-theme/Main.qml
---- sddm-astronaut-theme/Main.qml	2025-09-06 21:13:19.209757223 -0500
-+++ sddm-corporate-theme/Main.qml	2025-09-03 15:01:48.297147944 -0500
+Only in sddm-corporate-theme: corporate.patch
+Only in sddm-astronaut-theme: Fonts
+Only in sddm-astronaut-theme: .github
+diff -U0 -r -w -x .git sddm-astronaut-theme/Main.qml sddm-corporate-theme/Main.qml
+--- sddm-astronaut-theme/Main.qml	2025-09-03 12:57:00.366261907 -0500
++++ sddm-corporate-theme/Main.qml	2026-03-01 12:35:55.847401195 -0600
 @@ -34,19 +34,7 @@
 -    property bool leftleft: config.HaveFormBackground == "true" &&
 -                            config.PartialBlur == "false" &&
@@ -153,116 +679,371 @@ diff -U0 -r -w sddm-astronaut-theme/Main.qml sddm-corporate-theme/Main.qml
 -                    backgroundImage.source = config.background || config.Background
 +                } else {
 +                    backgroundImage.source = config.background || config.Background;
-diff -U0 -r -w sddm-astronaut-theme/metadata.desktop sddm-corporate-theme/metadata.desktop
---- sddm-astronaut-theme/metadata.desktop	2025-09-06 21:13:19.215126669 -0500
-+++ sddm-corporate-theme/metadata.desktop	2025-09-04 18:32:08.306308764 -0500
-@@ -9 +9 @@
+diff -U0 -r -w -x .git sddm-astronaut-theme/metadata.desktop sddm-corporate-theme/metadata.desktop
+--- sddm-astronaut-theme/metadata.desktop	2025-09-03 12:57:00.372180596 -0500
++++ sddm-corporate-theme/metadata.desktop	2026-03-06 11:16:36.343531721 -0600
+@@ -2,2 +2,2 @@
+-Name=sddm-astronaut-theme
+-Description=sddm-astronaut-theme
++Name=sddm-corporate-theme
++Description=sddm-corporate-theme
+@@ -5 +5 @@
+-Website=https://github.com/Keyitdev/sddm-astronaut-theme
++Website=https://github.com/BillWaller/sddm-corporate-theme
+@@ -9,2 +9,2 @@
 -ConfigFile=Themes/astronaut.conf
+-Screenshot=Previews/astronaut.png
 +ConfigFile=Themes/corporate.conf
-Only in sddm-corporate-theme/Previews: corporate.png
-Only in sddm-corporate-theme: .qtcreator
-diff -U0 -r -w sddm-astronaut-theme/setup.sh sddm-corporate-theme/setup.sh
---- sddm-astronaut-theme/setup.sh	2025-09-06 21:13:19.215126669 -0500
-+++ sddm-corporate-theme/setup.sh	2025-09-04 18:27:35.697440318 -0500
-@@ -19,2 +19 @@
--    "astronaut" "black_hole" "cyberpunk" "hyprland_kath" "jake_the_dog"
--    "japanese_aesthetic" "pixel_sakura" "pixel_sakura_static"
-+    "astronaut" "black_hole" "corporate" "cyberpunk" "hyprland_kath" "jake_the_dog" "japanese_aesthetic" "pixel_sakura" "pixel_sakura_static"
-@@ -54 +53,3 @@
--        echo -n "$1 (y/n): "; read -r r; [[ "$r" =~ ^[Yy]$ ]]
-+        echo -n "$1 (y/n): "
-+        read -r r
-+        [[ "$r" =~ ^[Yy]$ ]]
-@@ -62 +63,4 @@
--        select opt in "$@"; do [[ -n "$opt" ]] && { echo "$opt"; break; }; done
-+        select opt in "$@"; do [[ -n "$opt" ]] && {
-+            echo "$opt"
-+            break
-+        }; done
-@@ -67 +71,2 @@
--    local title="$1"; shift
-+    local title="$1"
-+    shift
-@@ -71 +76,2 @@
--        echo "$title"; "$@"
-+        echo "$title"
-+        "$@"
-@@ -77 +83,4 @@
--    local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && { echo ${m%%-*}; break; }; done)
-+    local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && {
-+        echo ${m%%-*}
-+        break
-+    }; done)
-@@ -89,2 +98,6 @@
--            sudo apt update && sudo apt install -y gum ;;
--        *) error "Cannot install gum automatically"; return 1 ;;
-+        sudo apt update && sudo apt install -y gum
-+        ;;
-+    *)
-+        error "Cannot install gum automatically"
-+        return 1
-+        ;;
-@@ -99 +112,4 @@
--            install_gum && { info "Restarting with gum..."; main; } || warn "Using fallback UI"
-+            install_gum && {
-+                info "Restarting with gum..."
-+                main
-+            } || warn "Using fallback UI"
-@@ -106 +122,4 @@
--    local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && { echo ${m%%-*}; break; }; done)
-+    local mgr=$(for m in pacman xbps dnf zypper apt; do command -v $m &>/dev/null && {
-+        echo ${m%%-*}
-+        break
-+    }; done)
-@@ -115 +134,4 @@
--        *) error "Unsupported package manager"; return 1 ;;
-+    *)
-+        error "Unsupported package manager"
-+        return 1
-+        ;;
-@@ -132 +154,4 @@
--    [[ ! -d "$src" ]] && { error "Clone repository first"; return 1;}
-+    [[ ! -d "$src" ]] && {
-+        error "Clone repository first"
-+        return 1
-+    }
-@@ -155 +180,4 @@
--    [[ ! -f "$METADATA" ]] && { error "Install theme first"; return 1; }
-+    [[ ! -f "$METADATA" ]] && {
-+        error "Install theme first"
-+        return 1
-+    }
-@@ -164 +192,4 @@
--    command -v systemctl &>/dev/null || { error "systemctl not found"; return 1; }
-+    command -v systemctl &>/dev/null || {
-+        error "systemctl not found"
-+        return 1
-+    }
-@@ -190 +220,0 @@
--
-@@ -198,2 +228,8 @@
--    [[ $EUID -eq 0 ]] && { error "Don't run as root"; exit 1; }
--    command -v git &>/dev/null || { error "git required"; exit 1; }
-+    [[ $EUID -eq 0 ]] && {
-+        error "Don't run as root"
-+        exit 1
-+    }
-+    command -v git &>/dev/null || {
-+        error "git required"
-+        exit 1
-+    }
-@@ -228 +264,4 @@
--            "❌ Exit") info "Goodbye!"; exit 0 ;;
-+        "❌ Exit")
-+            info "Goodbye!"
-+            exit 0
-+            ;;
-@@ -231 +270,2 @@
--        echo; if command -v gum &>/dev/null; then
-+        echo
-+        if command -v gum &>/dev/null; then
-@@ -234 +274,2 @@
--            echo -n "Press Enter to continue..."; read -r
-+            echo -n "Press Enter to continue..."
-+            read -r
++Screenshot=Previews/linux.png
+@@ -13 +13 @@
+-Theme-Id=sddm-astronaut-theme
++Theme-Id=sddm-corporate-theme
+Only in sddm-astronaut-theme/Previews: astronaut.png
+Only in sddm-corporate-theme/Previews: cia.png
+Only in sddm-corporate-theme/Previews: ibm.png
+Only in sddm-corporate-theme/Previews: linux.png
+Only in sddm-corporate-theme/Previews: norad.png
+Only in sddm-corporate-theme/Previews: space_force.png
+Only in sddm-corporate-theme/Previews: tumbleweed.png
+diff -U0 -r -w -x .git sddm-astronaut-theme/README.md sddm-corporate-theme/README.md
+--- sddm-astronaut-theme/README.md	2025-09-03 12:57:00.371261657 -0500
++++ sddm-corporate-theme/README.md	2026-03-06 11:10:27.077007395 -0600
+@@ -1 +1 @@
+-# sddm-astronaut-theme
++# SDDM-CORPORATE-THEME
+@@ -3,3 +3 @@
+-![Stars](https://img.shields.io/github/stars/keyitdev/sddm-astronaut-theme?color=dd864a&labelColor=1b1b25&style=for-the-badge)
+-![Forks](https://img.shields.io/github/forks/keyitdev/sddm-astronaut-theme?color=bf616a&labelColor=1b1b25&style=for-the-badge)
+-[![Ko-fi](https://img.shields.io/badge/support_me_on_ko--fi-F16061?style=for-the-badge&logo=kofi&logoColor=f5f5f5)](https://ko-fi.com/keyitdev)
++<!-- mtoc-start -->
+@@ -7 +5,12 @@
+-[sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) is a series of themes for the [SDDM](https://github.com/sddm/sddm/) display manager made by **[Keyitdev](https://github.com/Keyitdev)**.
++* [History of this Theme](#history-of-this-theme)
++  * [Marian Arlt's SDDM-SUGAR-DARK-THEME](#marian-arlts-sddm-sugar-dark-theme)
++    * [Essential Features Provided by SUGAR-DARK](#essential-features-provided-by-sugar-dark)
++    * [Synopsis](#synopsis)
++* [Objective](#objective)
++  * [Keyitdev's SDDM-ASTRONAUT-THEME](#keyitdevs-sddm-astronaut-theme)
++    * [Essential Features Provided by ASTRONAUT](#essential-features-provided-by-astronaut)
++* [Bill Waller's SDDM-CORPORATE-THEME](#bill-wallers-sddm-corporate-theme)
++  * [Files Modified Include](#files-modified-include)
++  * [Installation](#installation)
++  * [Testing](#testing)
++  * [Changing the Background](#changing-the-background)
+@@ -9 +18 @@
+-It's written using the latest version of Qt, which is **Qt6**. Its key features include **virtual keyboard support** and an **installation script**. This theme also support **animated wallpapers**. You can easily change its appearance by choosing another of the ten pre-made themes or creating your own. Each of these themes was created by modifying just one file - **[config](./Themes/astronaut.conf)**.
++<!-- mtoc-end -->
+@@ -11 +20 @@
+-All themes were created for 1080p. However, they should work well in other resolutions.
++## History of this Theme
+@@ -13 +22 @@
+-## Preview of all themes
++### Marian Arlt's SDDM-SUGAR-DARK-THEME
+@@ -15 +24 @@
+-![all_themes.gif](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/all_themes.gif?raw=true)
++[by Marian Arlt at https://github.com/MarianArlt/sddm-sugar-dark](https://github.com/MarianArlt/sddm-sugar-dark)
+@@ -17 +26 @@
+-## Preview of animated themes
++[Distributed under: GPLv3+ License https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
+@@ -19 +28 @@
+-https://github.com/user-attachments/assets/2cfc947e-4621-4e98-b5f3-07d5e224b80c
++#### Essential Features Provided by SUGAR-DARK
+@@ -21,3 +30,6 @@
+-<!-- <h2><a href="https://youtu.be/4tQ56xh7wBc" target="_blank">Watch more on Youtube!</a></h2> -->
+-<details>
+-<summary><h2>Detailed previews</h2></summary>
++- Space for a Corporate Logo
++- Time and Date
++- Drop Down User Selection Menu
++- Drop Down Session Selection Menu
++- Show/Hide Password
++- System Functions Including Restart and Shutdown
+@@ -25,9 +37 @@
+-**Astronaut**|**Black hole**
+-|:--:|:--:|
+-![astronaut](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/astronaut.png?raw=true)|![black_hole](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/black_hole.png?raw=true)
+-**Japanese aesthetic**|**Pixel sakura static**
+-![japanese_aesthetic](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/japanese_aesthetic.png?raw=true)|![pixel_sakura_static](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/pixel_sakura_static.png?raw=true)
+-**Purple leaves**|**Cyberpunk**
+-![purple_leaves](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/purple_leaves.png?raw=true)|![cyberpunk](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/cyberpunk.png?raw=true)
+-**Post-apocalyptic hacker**|**xxx**
+-![post-apocalyptic_hacker](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/post-apocalyptic_hacker.png?raw=true)|
++#### Synopsis
+@@ -35 +39 @@
+-**Hyprland Kath**
++Of all the SDDM Greeter Themes, SDDM-SUGAR-DARK by Marian Arlt upgraded as SDDM-ASTRONAUT by Keyitdev is, by a wide margin, the most capable and versatile I have seen. SDDM-CORPORATE is essentially SDDM-ASTRONAUT with some minor configuration changes.
+@@ -37 +41 @@
+-https://github.com/user-attachments/assets/1d926e76-44f7-4d99-ac6d-d1abcd7ed688
++## Objective
+@@ -39 +43 @@
+-**Pixel sakura**
++### Keyitdev's SDDM-ASTRONAUT-THEME
+@@ -41 +45 @@
+-https://github.com/user-attachments/assets/ea004765-7e84-4a0d-90cd-aaac97679f62
++[by Keyitdev at https://github.com/Keyitdev/sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)
+@@ -43 +47 @@
+-**Jake the dog**
++Copyright (C) 2022-2025 Keyitdev
+@@ -45 +49 @@
+-https://github.com/user-attachments/assets/181d48c2-f152-45f5-b568-21145be180f6
++#### Essential Features Provided by ASTRONAUT
+@@ -47 +51,2 @@
+-</details>
++- Compatibility with QT6
++- User Friendly Setup
+@@ -49 +54 @@
+-## Installation
++## Bill Waller's SDDM-CORPORATE-THEME
+@@ -51 +56,2 @@
+-### Automatic Installation
++[https://github.com/BillWaller/sddm-corporate-theme](https://github.com/BillWaller/sddm-corporate-theme)
++![SPACE FORCE](Previews/space_force.png)
+@@ -53,5 +59 @@
+-```sh
+-sh -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
+-```
+-> Works on distributions using pacman, xbps-install, dnf, zypper.   
+-> Remember to always read the scripts you run from the internet.
++![IBM Logo](Previews/ibm.png)
+@@ -59 +61 @@
+-### Manual Installation
++![SuSE Tumbleweed](Previews/tumbleweed.png)
+@@ -61 +63 @@
+-1. Install **dependencies**
++![NORAD](Previews/norad.png)
+@@ -63 +65 @@
+-[`sddm >= 0.21.0`](https://github.com/sddm/sddm), [`qt6 >= 6.8`](https://doc.qt.io/qt-6/index.html), [`qt6-svg >= 6.8`](https://doc.qt.io/qt-6/qtsvg-index.html), [`qt6-virtualkeyboard >= 6.8`](https://doc.qt.io/qt-6/qtvirtualkeyboard-index.html), [`qt6-multimedia >= 6.8`](https://doc.qt.io/qt-6/qtmultimedia-index.html)
++![CIA](Previews/cia.png)
+@@ -65 +67 @@
+-You may also want to install additional video codecs like h.264.
++![Linux](Previews/linux.png)
+@@ -67,7 +69 @@
+-```sh
+-sddm qt6-svg qt6-virtualkeyboard qt6-multimedia-ffmpeg     # Arch
+-sddm qt6-svg qt6-virtualkeyboard qt6-multimedia            # Void
+-sddm qt6-qtsvg qt6-qtvirtualkeyboard qt6-qtmultimedia      # Fedora
+-sddm-qt6 libQt6Svg6 qt6-virtualkeyboard qt6-virtualkeyboard-imports qt6-multimedia qt6-multimedia-imports        # OpenSUSE
+-sddm libqt6svg6 qt6-virtualkeyboard-plugin libqt6multimedia6 qml6-module-qtquick-controls qml6-module-qtquick-effects libxcb-cursor0 # Debian Unstable
+-```
++What's so special about SDDM-CORPORATE? Nothing. It doesn't even have its own pretty scenery, but preserves the functionality SDDM-ASTRONAUT, while adding minor cosmetic improvements. It's a stripped down, plain vanilla, configuration.
+@@ -75,7 +71,28 @@
+-2. Clone this repository
+-```sh
+-sudo git clone -b master --depth 1 https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
+-```
+-3. Copy fonts to `/usr/share/fonts/`
+-```sh
+-sudo cp -r /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
++Just provide a background image matching your display's resolution and place it in the Backgrounds directory, or select one of the background images provided with SDDM-ASTRONAUT. If you elect to create your own background, the top fourth and lateral two-thirds of the screen are available and unobstructed.
++
++The changes are cosmetic, and include:
++
++
++More colorful System Icons
++Larger and more colorful user name and password field icons
++Additional date format: "dddd MMMM d" -> "Thursday September 11th 2025"
++
++### Files Modified Include
++
++Themes/corporate.conf
++Components/Input.qml
++Components/Clock.qml
++Assets-Original (Copy of Original Icons)
++Assets-Corporate (New Icons)
++Assets (Copy of New Icons)
++sddm-corporate.patch
++
++### Installation
++
++[Clone sddm-corporate-theme](https://github.com/BillWaller/sddm-corporate-theme.git)
++
++Copy the sddm-corporate-theme directory structure to
++/usr/share/sddm/themes/breeze/
++
++```bash
++sudo cp -Rpdu sddm-corporate-theme /usr/share/sddm/themes
+@@ -83,4 +100,10 @@
+-4. Edit `/etc/sddm.conf`
+-```sh
+-echo "[Theme]
+-Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
++
++Edit /etc/sddm.conf.d/sddm.conf or /etc/sddm.conf depending on your system.
++
++Under \[Theme\], set
++Current=sddm-corporate-theme
++
++```bash
++sudo vi /etc/sddm.conf.d/sddm.conf
++or
++sudo vi /etc/sddm.conf
+@@ -88,4 +111,18 @@
+-5. Edit `/etc/sddm.conf.d/virtualkbd.conf`
+-```sh
+-echo "[General]
+-InputMethod=qtvirtualkeyboard" | sudo tee /etc/sddm.conf.d/virtualkbd.conf
++
++### Testing
++
++Edit the bash script, /usr/share/sddm/themes/sddm-corporate-theme/sddm.sh
++
++Verify that QML_IMPORT_PATH is set properly according to the topography of
++your system.
++
++```bash
++#!/bin/bash
++export QML_IMPORT_PATH=/usr/lib64/qt6/qml:/usr/lib64/qt5/qml
++export LC_ALL="en_US.UTF-8"
++theme=sddm-corporate-theme
++sddm env -i HOME="$HOME" DISPLAY="$DISPLAY" XAUTHORITY="$XAUTHORITY" \
++    sddm-greeter-qt6 \
++    --test-mode \
++    --qwindowgeometry 3840x2160+0+0 \
++    --theme /usr/share/sddm/themes/$theme
+@@ -94 +131,9 @@
+-## Selecting a theme
++To my knowledge, the sddm-greeter manual page does not include instructions
++on how to exit the greeter. In some discussion groups, the popular advice was
++to switch to a different TTY and kill the process. That works fine unless
++you are designing a login screen, and you need to test it repeatedly.
++The SDDM designers provided a better way.
++
++*****Press Alt-Tab to exit*****
++
++Run the script, /usr/share/sddm/themes/sddm-corporate-theme/sddm.sh
+@@ -96 +141 @@
+-You can select theme by editing [metadata](./metadata.desktop) (`/usr/share/sddm/themes/sddm-astronaut-theme/metadata.desktop`).
++*****Press Alt-Tab to exit*****
+@@ -98 +143,10 @@
+-Just edit this line:
++### Changing the Background
++
++Currently, the following backgrounds are included in the distribution:
++
++```bash
++cia.png
++ibm.png
++linux.png
++norad.png
++tumbleweed.png
+@@ -100 +154,5 @@
+-ConfigFile=Themes/astronaut.conf
++
++To change the background, navigate to the Backgrounds directory.
++
++```bash
++cd /usr/share/sddm/themes/sddm-corporate-theme/Backgrounds
+@@ -102 +159,0 @@
+-All available configs are in [Themes](./Themes/) directory.
+@@ -104 +161,2 @@
+-## Previewing a theme
++```
++Create a new link from the background you want to use to default.png.
+@@ -106,3 +164,2 @@
+-You can preview the set theme without logging out by runnning:
+-```sh
+-sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme/
++```bash
++sudo ln -s ibm.png default.png
+@@ -110 +166,0 @@
+-> Note that depending on the system configuration, the preview may differ slightly from the actual login screen.
+@@ -112 +167,0 @@
+-## Sources
+@@ -114,3 +169,48 @@
+-Initially the theme was independed fork of [MarianArlt's theme](https://github.com/MarianArlt/sddm-sugar-dark) but now the project has come a long way and started to significantly deviate from the original.
+-Many of the wallpapers and fonts used in this project are very popular and copied from one user to another, so I don't know who the original creator is. 
+-I also redesigned many of them, but here are links to some of the orginal artists who created these wonderful wallpapers:
++---
++Enjoy 🐸
++---
++
++## LICENSE
++
++The sddm-corporate-theme is a configuration of SDDM-SUGAR-DARK by MarianAlt with
++additional work by Keyitdev in SDDM-ASTRONAUT, and minor configuration changes
++by Bill Waller
++
++Essential features were provided by the sugar-dark-theme, and the astronaut-theme, and the corporate-theme is essentially a configuration of the astronaut-theme.
++
++Repo: https://github.com/BillWaller/sddm-corporate-theme
++Copyright (C) 2025-2025 BillWaller.
++
++Originally distributed under the GPLv3+ License by Marian Arlt, and Keyitd3ev,
++and now distributed under the same license by Bill Waller.
++
++## Modifications
++
++[Themes/corporate.conf](Themes/corporate.conf)
++
++Includes most of the changes. In particular, the DateFormat variable
++in the configuration file can be set to "dddd MMMM d", which produces
++"Weekday Day_of_Month Year". Clock.qml was modified to detect this format
++and add a two-letter suffix to the day of the month, so that 2025-09-11
++would be displayed as "Thursday September 11th 2025".
++
++[Components/Clock.qml](Components/Clock.qml)
++
++Modified to accept the DateFormat mentioned above.
++
++[Alternative Icons](Assets)
++
++More colorful icons were added.
++
++[Components/Input.qml](Components/Input.qml)
++
++The size of icons in the username and password fields were increased.
++
++Background scenery was removed to make room for a corporate logo, product
++advertising, or shameless self-promotion. You can add your own background
++image, or select one of the backgrounds provided with SDDM-ASTRONAUT, which
++are great. I removed the scripted installation because it involves installing
++additional software and the configuration file is easy to use and
++self-explanitory.
++
++[sddm-corporate.patch](sddm-corporate.patch)
+@@ -118,9 +218,2 @@
+-- Astronaut: [wallpaper](https://wallhaven.cc/w/e76pew), [font](https://fonts.google.com/specimen/Open+Sans/about)
+-- Black hole: [wallpaper](https://images2.alphacoders.com/114/1141632.jpg), [font](https://www.1001fonts.com/espacion-font.html)
+-- Japanese aesthetic: [wallpaper](https://imgur.com/a/pua0dYx) by [gharly](https://www.artstation.com/gharly), [font](https://www.1001fonts.com/electroharmonix-font.html)
+-- Purple leaves: [wallpaper](https://wallha.com/wallpaper/artwork-abstract-leaves-purple-texture-pattern-1414432), [font](https://fonts.google.com/specimen/Open+Sans/about)
+-- Cyberpunk: [wallpaper](https://images5.alphacoders.com/133/1330479.png) by [patrika](https://alphacoders.com/users/profile/227699/patrika), [font](https://www.1001fonts.com/kognigear-font.html)
+-- Post-apocalyptic hacker:  [wallpaper](https://images.alphacoders.com/137/thumb-1920-1375178.png) by [patrika](https://alphacoders.com/users/profile/227699/patrika), [font](https://www.1001fonts.com/fragile-bombers-font.html)
+-- Hyprland Kath: [wallpaper](https://motionbgs.com/andvari-last-origin), [font](https://www.1001fonts.com/pixelon-font.html)
+-- Pixel sakura: [wallpaper](https://imgur.com/gallery/sakura-tree-with-petals-flying-off-t5tg4N8), [font](https://www.1001fonts.com/arcadeclassic-font.html)
+-- Jake the dog: [wallpaper](https://motionbgs.com/jake-the-dog), [font](https://fontmeme.com/fonts/thunderman-font/)
++Documents specific changes. Please excuse some extraneous text due to
++automatic editing by my qml formatter.
+@@ -128 +221,4 @@
+-## Supporting project
++With much thanks to the original authors of SDDM-ASTRONAUT and SDDM-SUGAR-DARK,
++who provided, not only the code base, but the inspiration for this small project.
++Certainly, it would not have been possible without their contribution. You can
++find them at the links below.
+@@ -130 +226,2 @@
+-You can support me simply by dropping a **star** on **[github](https://github.com/Keyitdev/sddm-astronaut-theme)** or giving a **subscription** on **[YouTube](http://www.youtube.com/channel/UCVoGVyAP2sHPQyegwBMJKyQ?sub_confirmation=1)**.
++Someone please take a 4K photo of the Space Force Headquarters in Colorado
++Springs, Colorado, and send it to me so I can add it to the distribution.
+@@ -132 +229,2 @@
+-If you enjoyed it and would like to show your appreciation, you can make a **[donation](https://ko-fi.com/keyitdev)** using **[kofi](https://ko-fi.com/keyitdev)**.
++[Sugar Dark by MarianArlt](https://github.com/MarianArlt/sddm-sugar-dark)
++Copyright (C) 2020-2022 Marian Arlt
+@@ -134 +232,2 @@
+-[![Ko-fi](https://img.shields.io/badge/support_me_on_ko--fi-F16061?style=for-the-badge&logo=kofi&logoColor=f5f5f5)](https://ko-fi.com/keyitdev)
++[Astronaut by Keyitdev](https://github.com/Keyitdev/sddm-astronaut-theme)
++Copyright (C) 2022-2025 Keyitdev
+@@ -136,2 +235 @@
+-Distributed under the **[GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html) License**.    
+-Copyright (C) 2022-2025 Keyitdev.
++[LICENSE GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html)
+Only in sddm-astronaut-theme: setup.sh
+Only in sddm-astronaut-theme/Themes: astronaut.conf
+Only in sddm-astronaut-theme/Themes: black_hole.conf
 Only in sddm-corporate-theme/Themes: corporate.conf
+Only in sddm-astronaut-theme/Themes: cyberpunk.conf
+Only in sddm-astronaut-theme/Themes: hyprland_kath.conf
+Only in sddm-astronaut-theme/Themes: jake_the_dog.conf
+Only in sddm-astronaut-theme/Themes: japanese_aesthetic.conf
+Only in sddm-astronaut-theme/Themes: pixel_sakura.conf
+Only in sddm-astronaut-theme/Themes: pixel_sakura_static.conf
+Only in sddm-astronaut-theme/Themes: post-apocalyptic_hacker.conf
+Only in sddm-astronaut-theme/Themes: purple_leaves.conf
