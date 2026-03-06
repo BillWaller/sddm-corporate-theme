@@ -128,39 +128,108 @@ sddm env -i HOME="$HOME" DISPLAY="$DISPLAY" XAUTHORITY="$XAUTHORITY" \
     --theme /usr/share/sddm/themes/$theme
 ```
 
-Before running this script, you should know that you can exit the sddm test-mode, by
-pressing press Alt-Tab. You will get an option to end the program.
+To my knowledge, the sddm-greeter manual page does not include instructions
+on how to exit the greeter. In some discussion groups, the popular advice was
+to switch to a different TTY and kill the process. That works fine unless
+you are designing a login screen, and you need to test it repeatedly.
+The SDDM designers provided a better way.
+
+*****Press Alt-Tab to exit*****
 
 Run the script, /usr/share/sddm/themes/sddm-corporate-theme/sddm.sh
 
-Press Alt-Tab to exit sddm test-mode.
+*****Press Alt-Tab to exit*****
 
 ### Changing the Background
 
-```bash
-sudo vi /usr/share/sddm/themes/sddm-corporate-theme/Themes/corporate.conf
-```
-
-Set Background=Backgrounds/yourbackground.png
-
-Where your background is one of the png files in
+Currently, the following backgrounds are included in the distribution:
 
 ```bash
-ls /usr/share/sddm/themes/sddm-corporate-theme/Backgrounds
+cia.png
+ibm.png
+linux.png
+norad.png
+tumbleweed.png
 ```
 
-Currently, five backgrounds are included in the distribution. They are:
-
-cia.png, ibm.png, linux.png, norad.png, and tumbleweed.png
-
-These backgrounds are shown as displayed by sddm in
+To change the background, navigate to the Backgrounds directory.
 
 ```bash
-ls /usr/share/sddm/themes/sddm-corporate-theme/Previews
+cd /usr/share/sddm/themes/sddm-corporate-theme/Backgrounds
 ```
 
-They have the same file names as the backgrounds.
+```
+Create a new link from the background you want to use to default.png.
+
+```bash
+sudo ln -s ibm.png default.png
+```
+
 
 ---
 Enjoy 🐸
 ---
+
+## LICENSE
+
+The sddm-corporate-theme is a configuration of SDDM-SUGAR-DARK by MarianAlt with
+additional work by Keyitdev in SDDM-ASTRONAUT, and minor configuration changes
+by Bill Waller
+
+Essential features were provided by the sugar-dark-theme, and the astronaut-theme, and the corporate-theme is essentially a configuration of the astronaut-theme.
+
+Repo: https://github.com/BillWaller/sddm-corporate-theme
+Copyright (C) 2025-2025 BillWaller.
+
+Originally distributed under the GPLv3+ License by Marian Arlt, and Keyitd3ev,
+and now distributed under the same license by Bill Waller.
+
+## Modifications
+
+[Themes/corporate.conf](Themes/corporate.conf)
+
+Includes most of the changes. In particular, the DateFormat variable
+in the configuration file can be set to "dddd MMMM d", which produces
+"Weekday Day_of_Month Year". Clock.qml was modified to detect this format
+and add a two-letter suffix to the day of the month, so that 2025-09-11
+would be displayed as "Thursday September 11th 2025".
+
+[Components/Clock.qml](Components/Clock.qml)
+
+Modified to accept the DateFormat mentioned above.
+
+[Alternative Icons](Assets)
+
+More colorful icons were added.
+
+[Components/Input.qml](Components/Input.qml)
+
+The size of icons in the username and password fields were increased.
+
+Background scenery was removed to make room for a corporate logo, product
+advertising, or shameless self-promotion. You can add your own background
+image, or select one of the backgrounds provided with SDDM-ASTRONAUT, which
+are great. I removed the scripted installation because it involves installing
+additional software and the configuration file is easy to use and
+self-explanitory.
+
+[sddm-corporate.patch](sddm-corporate.patch)
+
+Documents specific changes. Please excuse some extraneous text due to
+automatic editing by my qml formatter.
+
+With much thanks to the original authors of SDDM-ASTRONAUT and SDDM-SUGAR-DARK,
+who provided, not only the code base, but the inspiration for this small project.
+Certainly, it would not have been possible without their contribution. You can
+find them at the links below.
+
+Someone please take a 4K photo of the Space Force Headquarters in Colorado
+Springs, Colorado, and send it to me so I can add it to the distribution.
+
+[Sugar Dark by MarianArlt](https://github.com/MarianArlt/sddm-sugar-dark)
+Copyright (C) 2020-2022 Marian Arlt
+
+[Astronaut by Keyitdev](https://github.com/Keyitdev/sddm-astronaut-theme)
+Copyright (C) 2022-2025 Keyitdev
+
+[LICENSE GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html)

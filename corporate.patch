@@ -13,10 +13,7 @@ diff -U0 -r -w sddm-astronaut-theme/Components/Clock.qml sddm-corporate-theme/Co
 +            let date = new Date();
 +            let day = date.getDate();
 +            let year = date.getFullYear();
-+            text = date.toLocaleDateString(Qt.locale(config.Locale), config.DateFormat == "short" ? Locale.ShortFormat : config.DateFormat == "dddd MMMM d" ? config.DateFormat + getDaySuffix(day) + ", " + year : config.DateFormat !== "" ? config.DateFormat : Locale.LongFormat);
-@@ -61,2 +65,2 @@
--            dateLabel.updateTime()
--            timeLabel.updateTime()
++            text = date.toLocaleDateString(Qt.locale(config.Locale), config.DateFormat == "short" ? Locale.ShortFormat : config.DateFormat == "dddd MMMM d" ? config.DateFormat : config.DateFormat !== "" ? config.DateFormat : Locale.LongFormat) + (config.DateFormat == "dddd MMMM d" ? getDaySuffix(day) + ", " + year : "");
 +            dateLabel.updateTime();
 +            timeLabel.updateTime();
 @@ -67,2 +71,14 @@
